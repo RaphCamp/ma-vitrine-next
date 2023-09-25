@@ -4,7 +4,7 @@ import codewars from '../assets/images/codewars.svg'
 import Intro from '@/components/intro/intro'
 import Navbar from '@/components/navbar/navbar'
 
-export default function Home() {
+export default function PageHome() {
   return (
     <main>
       <Navbar/>

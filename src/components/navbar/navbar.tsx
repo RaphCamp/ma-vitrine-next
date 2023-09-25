@@ -1,3 +1,6 @@
+'use client'
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 import { Component } from "react"
 import Image from 'next/image'
 import codewars from '@/assets/images/codewars.svg'
@@ -5,6 +8,7 @@ import stormTrooper from '@/assets/images/stormtrooper.svg'
 import styles from './navbar.module.css'
 
 export default function Navbar() {
+    const pathname = usePathname();
     return (
         <main className={styles.nav}>
             <a href="#" className={styles.nav_icon} aria-label="visit homepage" aria-current="page">
@@ -19,11 +23,11 @@ export default function Navbar() {
                 <span></span>
             </button>
             <div className={styles.navlinks_container}>
-                <a href="#" aria-current="page">Accueil</a>
-                <a href="#">Mon CV</a>
-                <a href="#">Projets Perso</a>
-                <a href="#">Sites</a>
-                <a href="#">Contact</a>
+                <Link className={`link ${pathname === '/' ? styles.active : styles.inactive}`} href="/">Accueil</Link>
+                <Link className={`link ${pathname === '/cv' ? styles.active : styles.inactive}`} href="/cv">Mon CV</Link>
+                <Link className={`link ${pathname === '/projets' ? styles.active : styles.inactive}`} href="/projets">Projets Perso</Link>
+                <Link className={`link ${pathname === '/sites' ? styles.active : styles.inactive}`} href="/sites">Sites</Link>
+                <Link className={`link ${pathname === '/contact' ? styles.active : styles.inactive}`} href="/contact">Contact</Link>
             </div>
             </div>
     

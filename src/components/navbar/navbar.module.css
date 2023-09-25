@@ -30,7 +30,19 @@
   .hamburger {
     display: none;
   }
-  .navlinks_container a {
+  .active {
+    margin: 0 10px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #414141;
+    display: inline-block;
+    position: relative;
+    color: rgb(211, 5, 5);
+    font-size: 1.5em;
+    cursor:default;
+    pointer-events: none;
+  }
+  .inactive {
     margin: 0 10px;
     font-weight: 500;
     text-decoration: none;
@@ -40,7 +52,8 @@
     color: rgb(238, 255, 0);
     font-size: 1.5em;
   }
-  .navlinks_container a::after {
+
+  .inactive::after {
     content: "";
     display: block;
     position: absolute;
@@ -78,6 +91,7 @@
   .sign_user {
     display: none;
   }
+
   
   @media (max-width: 900px) {
     .nav {
@@ -154,9 +168,13 @@
     .open {
       transform: translate(0%);
     }
-    .navlinks_container a {
-      font-size: 18px;
-      margin: 10px 0
+    .active {
+        font-size: 18px;
+        margin: 10px 0
+      }    
+    .inactive {
+        font-size: 18px;
+        margin: 10px 0
     }
   
     .nav_authentication {
