@@ -3,6 +3,7 @@ import musicOn from '@/assets/images/musicOn.png'
 import codewars from '@/assets/images/codewars.svg'
 import styles from './intro.module.css'
 import Stars from '../stars/stars'
+import Link from 'next/link'
 
 export default function Intro() {
     return (
@@ -28,8 +29,7 @@ export default function Intro() {
                 <br/>
                 Sa mis&shy;sion ter&shy;mi&shy;née, Code&shy;walker se met dé&shy;sor&shy;mais à la re&shy;cher&shy;che d'une en&shy;tre&shy;pri&shy;se pour dé&shy;bu&shy;ter le tra&shy;vail de ses rêves...
               </p>
-  
-              <a href="**" className={styles.space_button}>Découvrez son CV</a>
+              <Link className={styles.space_button} href="/cv">Découvrez son CV</Link>
             </div>
           </div>
         </div>

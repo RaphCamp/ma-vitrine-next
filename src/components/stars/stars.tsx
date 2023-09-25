@@ -1,5 +1,5 @@
 import Star from './star/star';
-import styles from './stars.module.css'
+import styles from '@/components/stars/stars.module.css'
 
 export default function Stars() {
 
