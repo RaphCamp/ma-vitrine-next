@@ -1,0 +1,85 @@
+  
+  .star {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 1em;
+    width: 1em;
+    margin-left: -0.5em;
+    margin-top: -0.5em;
+    background: none;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+  }
+  
+  .point {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 1em;
+    height: 1.4em;
+    margin-left: -0.5em;
+    margin-top: -0.7em;
+    font-size: 1em;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0.5em 0.1em #fff;
+    opacity: 0;
+    animation: movestar;
+    animation-timing-function: cubic-bezier(0.98,0,1,1);
+    animation-duration: inherit;
+    animation-delay: inherit;
+    animation-iteration-count: inherit; 
+  }
+  
+   .point::after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    width: 0em; 
+    height: 1em;
+    margin-top: 1em;
+    margin-left: 0.5em;
+    border-radius: 50% 50% 0 0;
+    background-color: rgba(255,255,255,0.7);
+    box-shadow: 0 -1em 0.5em 0.2em rgba(255,255,255,0.3);
+    animation: moveshade;
+    animation-timing-function: linear;
+    animation-duration: inherit;
+    animation-delay: inherit;
+    animation-iteration-count: inherit;   
+  }
+  
+  @keyframes movestar {
+    0% {
+      opacity: 0.9;
+      transform: translateX(0) translateY(1vmax) scale(0.1);
+      background-color: #fff;
+    }
+    100% {
+      transform: translateX(0) translateY(110vmax) scale(0.5);
+      opacity: 1;
+      background-color: #00f;
+    }
+  }
+  
+  @keyframes moveshade {
+    0% {
+      transform: scaleY(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scaleY(30);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes rotateuniverse {
+    0% {
+      transform: rotateZ(0deg);
+    }
+    100% {
+      transform: rotateZ(359deg);
+    }
+  }
