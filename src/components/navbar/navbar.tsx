@@ -5,12 +5,13 @@ import { Component } from "react"
 import Image from 'next/image'
 import codewars from '@/assets/images/codewars.svg'
 import stormTrooper from '@/assets/images/stormtrooper.svg'
+import metal from '@/assets/images/metal.jpg'
 import styles from './navbar.module.css'
 
 export default function Navbar() {
     const pathname = usePathname();
     return (
-        <main className={styles.nav}>
+        <main className={styles.nav} style={{backgroundImage : metal.src}}>
             <a href="#" className={styles.nav_icon} aria-label="visit homepage" aria-current="page">
             <Image src={codewars} alt="chat icon"/>
             <span>Raphaël Codewalker</span>
