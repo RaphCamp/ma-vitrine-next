@@ -14,7 +14,7 @@ export default function Star() {
     }
     function randomStyle() {
         return{
-            transform:"rotateZ("+randomRotate()+"deg); animation-duration: "+randomAnimationDuration()+"s; animation-delay: "+randomAnimationDelay()+"s"
+            transform: `rotateZ(${randomRotate()}deg)`, animationDuration: `${randomAnimationDuration()}s`, animationDelay: `${randomAnimationDelay()}s`
         };
     }
     return (
