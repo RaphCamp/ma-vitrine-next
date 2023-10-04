@@ -2,36 +2,40 @@
 
 import { useState } from 'react';
 import styles from './Doors.module.css';
+import { DoorState, DoorsAnimation } from './DoorsAnimations';
 
-export enum DoorState {
-    Initial,
-    Open,
-    Close
-};
 
 export default function Doors() {
     const [doorState, setDoorState] = useState<DoorState>(DoorState.Initial);
+    const [doorIsMoving, setDoorIsMoving] = useState<boolean>(false);
+    const leftDoor = new DoorsAnimation(styles.openLeftAnimation,styles.closeLeftAnimation);
+    const rightDoor = new DoorsAnimation(styles.openRightAnimation,styles.closeRightAnimation);
+    const locker = new DoorsAnimation(styles.openLockerAnimation,styles.closeLockerAnimation);
 
-    const handleLockerClick = () => {
-        if (doorState === DoorState.Initial)
-            setDoorState(DoorState.Open);
-        else
+
+    const handleLockerClick = () => {  
+        if (!doorIsMoving) {
+            setDoorIsMoving(true);
             setDoorState(doorState === DoorState.Open ? DoorState.Close : DoorState.Open);
+            setTimeout(() => setDoorIsMoving(false),3000);
+        }  
     }
-
-    function switchClassAnimation(isLeftDoor:boolean) {
-        switch (doorState) {
-            case DoorState.Initial : return  '';
-            case  DoorState.Open : return isLeftDoor ? styles.openLeftAnimation : styles.openRightAnimation;
-            case  DoorState.Close : return isLeftDoor ? styles.closeLeftAnimation : styles.closeRightAnimation;
+    function lockerDisplayContent() {
+        if (doorIsMoving) {
+            return "";
+        }  
+        else {
+           return doorState === DoorState.Open ? "CLOSE" : "OPEN";
         }
     }
 
     return (
         <div className={styles.container}>
-            <div className={`${styles.leftDoor} ${switchClassAnimation(true)}`}></div>
-            <div className={`${styles.rightDoor} ${switchClassAnimation(false)}`}>
-                <button onClick={handleLockerClick} className={`${styles.doorLocker} ${doorState === DoorState.Initial ? '' : doorState === DoorState.Open ? styles.openLockerAnimation : styles.closeLockerAnimation}`} />
+            <div className={`${styles.leftDoor} ${leftDoor.SelectStyle(doorState)}`}></div>
+            <div className={`${styles.rightDoor} ${rightDoor.SelectStyle(doorState)}`}>
+                <button onClick={handleLockerClick} className={`${styles.doorLocker} ${locker.SelectStyle(doorState)}`} >
+                    <p>{lockerDisplayContent()}</p>
+                </button>
             </div>
         </div>
     )

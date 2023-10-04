@@ -68,6 +68,15 @@
     }
 }
 
+@keyframes notUsable-locker {
+    0% {
+        background-color: green;
+    }
+    20% {
+        background-color: red;
+    }
+}
+
 .leftDoor {
     height: 100%;
     width: 50%;
@@ -121,7 +130,7 @@
 }
 
 .openLockerAnimation {
-    animation: unlock 500ms linear 0ms 2;
+    animation: unlock 1000ms linear 0ms 1;
 }
 
 .closeLockerAnimation {
