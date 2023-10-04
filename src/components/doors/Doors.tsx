@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import styles from './Doors.module.css';
 import { DoorState, DoorsAnimation } from './DoorsAnimations';
+import Navigation from './navigation/navigation';
 
 
 export default function Doors() {
@@ -31,7 +32,9 @@ export default function Doors() {
 
     return (
         <div className={styles.container}>
-            <div className={`${styles.leftDoor} ${leftDoor.SelectStyle(doorState)}`}></div>
+            <div className={`${styles.leftDoor} ${leftDoor.SelectStyle(doorState)}`}>
+                <Navigation/>
+            </div>
             <div className={`${styles.rightDoor} ${rightDoor.SelectStyle(doorState)}`}>
                 <button onClick={handleLockerClick} className={`${styles.doorLocker} ${locker.SelectStyle(doorState)}`} >
                     <p>{lockerDisplayContent()}</p>
