@@ -16,6 +16,20 @@
   }
 }
 
+html, body {
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+/* .root-container {
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: auto;
+} */
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -24,4 +38,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+
+    display: flex;
+    flex-direction: column;
 }

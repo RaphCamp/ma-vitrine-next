@@ -27,7 +27,7 @@ animation: intro 2s ease-out;
 
 .presentation .scrolling{
 position: absolute;
-z-index: 3;
+z-index: 2;
 width: 98%;
 margin-left: auto;
 margin-right: auto;
@@ -116,59 +116,10 @@ animation: logo 5s ease-out 2.5s;
 max-width: 100%;
 }
 
-@-webkit-keyframes intro {
-0% { opacity: 1; }
-90% { opacity: 1; }
-100% { opacity: 0; }
-}
-
-@-moz-keyframes intro {
-0% { opacity: 1; }
-90% { opacity: 1; }
-100% { opacity: 0; }
-}
-
-@-ms-keyframes intro {
-0% { opacity: 1; }
-90% { opacity: 1; }
-100% { opacity: 0; }
-}
-
-@-o-keyframes intro {
-0% { opacity: 1; }
-90% { opacity: 1; }
-100% { opacity: 0; }
-}
-
 @keyframes intro {
 0% { opacity: 1; }
 90% { opacity: 1; }
 100% { opacity: 0; }
-}
-
-
-@-webkit-keyframes logo {
-0% { -webkit-transform: scale(1); opacity: 1; }
-50% { opacity: 1; }
-100% { -webkit-transform: scale(0.1); opacity: 0; }
-}
-
-@-moz-keyframes logo {
-0% { -moz-transform: scale(1); opacity: 1; }
-50% { opacity: 1; }
-100% { -moz-transform: scale(0.1); opacity: 0; }
-}
-
-@-ms-keyframes logo {
-0% { -ms-transform: scale(1); opacity: 1; }
-50% { opacity: 1; }
-100% { -ms-transform: scale(0.1); opacity: 0; }
-}
-
-@-o-keyframes logo {
-0% { -o-transform: scale(1); opacity: 1; }
-50% { opacity: 1; }
-100% { -o-transform: scale(0.1); opacity: 0; }
 }
 
 @keyframes logo {

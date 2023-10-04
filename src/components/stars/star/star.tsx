@@ -12,11 +12,13 @@ export default function Star() {
     function randomAnimationDelay():number {
         return Math.random() * 2;
     }
-
+    function randomStyle() {
+        return{
+            transform: `rotateZ(${randomRotate()}deg)`, animationDuration: `${randomAnimationDuration()}s`, animationDelay: `${randomAnimationDelay()}s`
+        };
+    }
     return (
-    <main>
-          <div className={styles.star} style={{transform: "rotateZ("+randomRotate()+"deg); animation-duration: "+randomAnimationDuration()+"s; animation-delay: "+randomAnimationDelay()+"s"}}><div className={styles.point}></div></div>
-    </main>
+      <main className={styles.star} style={randomStyle()}><div className={styles.point}></div></main>
     )
 
 
