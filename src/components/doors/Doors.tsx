@@ -19,10 +19,18 @@ export default function Doors() {
             setDoorState(doorState === DoorState.Open ? DoorState.Close : DoorState.Open);
     }
 
+    function switchClassAnimation(isLeftDoor:boolean) {
+        switch (doorState) {
+            case DoorState.Initial : return  '';
+            case  DoorState.Open : return isLeftDoor ? styles.openLeftAnimation : styles.openRightAnimation;
+            case  DoorState.Close : return isLeftDoor ? styles.closeLeftAnimation : styles.closeRightAnimation;
+        }
+    }
+
     return (
         <div className={styles.container}>
-            <div className={`${styles.leftDoor} ${doorState == DoorState.Initial ? '' : doorState === DoorState.Open ? styles.openLeftAnimation : styles.closeLeftAnimation}`}></div>
-            <div className={`${styles.rightDoor} ${doorState === DoorState.Initial ? '' : doorState === DoorState.Open ? styles.openRightAnimation : styles.closeRightAnimation}`}>
+            <div className={`${styles.leftDoor} ${switchClassAnimation(true)}`}></div>
+            <div className={`${styles.rightDoor} ${switchClassAnimation(false)}`}>
                 <button onClick={handleLockerClick} className={`${styles.doorLocker} ${doorState === DoorState.Initial ? '' : doorState === DoorState.Open ? styles.openLockerAnimation : styles.closeLockerAnimation}`} />
             </div>
         </div>
