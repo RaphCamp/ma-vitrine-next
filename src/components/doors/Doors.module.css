@@ -81,7 +81,10 @@
     height: 100%;
     width: 50%;
 
-    background-color: blue;
+    background-image: url("../../assets/images/metal.jpg");
+    background-size: cover;
+    
+    border-right:  4px solid black;
 
     pointer-events: all;
 }
@@ -91,7 +94,10 @@
     height: 100%;
     width: 50%;
 
-    background-color: red;
+    background-image: url("../../assets/images/metal.jpg");
+    background-size: cover;
+
+    border-left: 4px solid black;
 
     pointer-events: all;
 }
@@ -117,6 +123,7 @@
 .doorLocker {
     height: 192px;
     width: 192px;
+
     background-color: green;
 
     align-self: center;
