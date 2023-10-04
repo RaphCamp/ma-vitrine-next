@@ -1,6 +1,8 @@
+import Doors from '@/components/doors/Doors'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Navbar from '@/components/navbar/navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,9 +16,25 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+          <Doors />
+          <Navbar />
+          {children}
+      </body>
     </html>
+    // autre possibilité de structure (nécessite de décommenter .root-container dans globals.css):
+
+    // <html lang="en">
+    //   <body className={inter.className}>
+    //     <Doors />
+    //     <div className='root-container'>
+    //       <Navbar />
+    //       {children}
+    //     </div>
+    //   </body>
+    // </html>
   )
 }
