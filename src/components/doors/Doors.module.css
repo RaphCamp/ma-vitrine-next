@@ -19,7 +19,7 @@
         transform: translateX(0%);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(-95%);
     }
 }
 
@@ -28,13 +28,13 @@
         transform: translateX(0%);
     }
     to {
-        transform: translateX(100%);
+        transform: translateX(95%);
     }
 }
 
 @keyframes close-left {
     from {
-        transform: translateX(-100%);
+        transform: translateX(-95%);
     }
     to {
         transform: translateX(0%);
@@ -43,7 +43,7 @@
 
 @keyframes close-right {
     from {
-        transform: translateX(100%);
+        transform: translateX(95%);
     }
     to {
         transform: translateX(0%);
@@ -92,10 +92,10 @@
     pointer-events: all;
 }
 .initialLeft {
-    transform: translateX(-100%)
+    transform: translateX(-95%)
 }
 .initialRight {
-    transform: translateX(100%);
+    transform: translateX(95%);
 }
 
 .rightDoor {
