@@ -6,7 +6,7 @@
     background-size: cover;
 }
 
-.project1 {
+.musee {
     height: 200px;
     width: 200px;
     background-image: url(../../assets/images/planete1.avif);
@@ -16,8 +16,19 @@
     margin: auto;
     display: flex;
     transform: translateX(-400px) translateY(-300px);
+    transition: all 1s ease-in-out; 
+    font-size: 0rem;
+    color: rgb(207, 207, 207);
+    -webkit-text-stroke: 0px black;
+}
+.musee:hover {
+    transform: translateX(-400px) translateY(-300px) scale(1.5);
+    font-size: 3rem;
+    color: rgb(9, 40, 122);
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
 }
 
-.project1 p {
+.musee p {
     margin: auto;
+    transform: rotateZ(-30deg);
 }
