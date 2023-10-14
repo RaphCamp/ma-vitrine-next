@@ -9,15 +9,15 @@ import Navigation from './navigation/navigation';
 export default function Doors() {
     const [doorState, setDoorState] = useState<DoorState>(DoorState.Initial);
     const [doorIsMoving, setDoorIsMoving] = useState<boolean>(false);
-    const leftDoor = new DoorsAnimation(styles.openLeftAnimation,styles.closeLeftAnimation);
-    const rightDoor = new DoorsAnimation(styles.openRightAnimation,styles.closeRightAnimation);
+    const leftDoor = new DoorsAnimation(styles.openLeftAnimation,styles.closeLeftAnimation,styles.initialLeft);
+    const rightDoor = new DoorsAnimation(styles.openRightAnimation,styles.closeRightAnimation,styles.initialRight);
     const locker = new DoorsAnimation(styles.openLockerAnimation,styles.closeLockerAnimation);
 
 
     const handleLockerClick = () => {  
         if (!doorIsMoving) {
             setDoorIsMoving(true);
-            setDoorState(doorState === DoorState.Open ? DoorState.Close : DoorState.Open);
+            setDoorState(doorState !== DoorState.Close ? DoorState.Close : DoorState.Open);
             setTimeout(() => setDoorIsMoving(false),3000);
         }  
     }

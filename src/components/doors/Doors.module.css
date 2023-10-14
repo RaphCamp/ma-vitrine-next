@@ -91,6 +91,12 @@
 
     pointer-events: all;
 }
+.initialLeft {
+    transform: translateX(-100%)
+}
+.initialRight {
+    transform: translateX(100%);
+}
 
 .rightDoor {
     display: flex;
