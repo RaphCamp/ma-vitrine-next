@@ -4,9 +4,9 @@ import styles from "./page.module.css"
 export default function PageProjets() {
   return (
     <main className={styles.container}>
-      <div className={styles.project1}>
-        <Link href="/projets/musee">Musee</Link>
-      </div>
+        <Link className={styles.project1} href="/projets/musee">
+          <p>Musée</p>
+        </Link>
   </main>
   )
 }
