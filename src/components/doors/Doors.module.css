@@ -78,6 +78,9 @@
 }
 
 .leftDoor {
+    display: flex;
+    justify-content: center;
+
     height: 100%;
     width: 50%;
 
@@ -87,6 +90,12 @@
     border-right:  4px solid black;
 
     pointer-events: all;
+}
+.initialLeft {
+    transform: translateX(-100%)
+}
+.initialRight {
+    transform: translateX(100%);
 }
 
 .rightDoor {

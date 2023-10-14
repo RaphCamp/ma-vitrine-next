@@ -6,7 +6,8 @@ export enum DoorState {
 
 export class DoorsAnimation {
     
-    constructor(openStyle:string,closeStyle:string) {
+    constructor(openStyle:string,closeStyle:string,initialStyle:string = '') {
+        this.initialStyle = initialStyle;
         this.openStyle = openStyle;
         this.closeStyle = closeStyle;
     }

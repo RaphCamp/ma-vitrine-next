@@ -1,10 +1,7 @@
 import Doors from '@/components/doors/Doors'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import Navbar from '@/components/navbar/navbar'
-
-const inter = Inter({ subsets: ['latin'] })
+import { inter } from './fonts'
 
 export const metadata: Metadata = {
   title: 'Raphaël Codewalker',
@@ -18,23 +15,11 @@ export default function RootLayout({
 }) {
 
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={inter.className}>
+      <body>
           <Doors />
-          <Navbar />
           {children}
       </body>
     </html>
-    // autre possibilité de structure (nécessite de décommenter .root-container dans globals.css):
-
-    // <html lang="en">
-    //   <body className={inter.className}>
-    //     <Doors />
-    //     <div className='root-container'>
-    //       <Navbar />
-    //       {children}
-    //     </div>
-    //   </body>
-    // </html>
   )
 }
