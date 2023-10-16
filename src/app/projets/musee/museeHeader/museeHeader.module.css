@@ -1,0 +1,11 @@
+.container {
+  background-color: aliceblue;
+  height: 100px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

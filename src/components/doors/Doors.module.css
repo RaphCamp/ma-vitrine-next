@@ -84,8 +84,9 @@
     height: 100%;
     width: 50%;
 
-    background-image: url("../../assets/images/metal.jpg");
+    background-image: url("../../assets/images/spaceDoorLeft.jpg");
     background-size: cover;
+    background-position: center;
     
     border-right:  4px solid black;
 
@@ -103,8 +104,9 @@
     height: 100%;
     width: 50%;
 
-    background-image: url("../../assets/images/metal.jpg");
+    background-image: url("../../assets/images/spaceDoorRigth.jpg");
     background-size: cover;
+    background-position: center;
 
     border-left: 4px solid black;
 
