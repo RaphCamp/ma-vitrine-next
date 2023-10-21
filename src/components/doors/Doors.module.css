@@ -9,7 +9,7 @@
     width: 100vw;
 
     overflow: hidden;
-    z-index: 10;
+    z-index: 3;
 
     pointer-events: none;
 }
@@ -19,7 +19,7 @@
         transform: translateX(0%);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(-95%);
     }
 }
 
@@ -28,13 +28,13 @@
         transform: translateX(0%);
     }
     to {
-        transform: translateX(100%);
+        transform: translateX(95%);
     }
 }
 
 @keyframes close-left {
     from {
-        transform: translateX(-100%);
+        transform: translateX(-95%);
     }
     to {
         transform: translateX(0%);
@@ -43,7 +43,7 @@
 
 @keyframes close-right {
     from {
-        transform: translateX(100%);
+        transform: translateX(95%);
     }
     to {
         transform: translateX(0%);
@@ -84,18 +84,19 @@
     height: 100%;
     width: 50%;
 
-    background-image: url("../../assets/images/metal.jpg");
+    background-image: url("../../assets/images/spaceDoorLeft.jpg");
     background-size: cover;
+    background-position: center;
     
     border-right:  4px solid black;
 
     pointer-events: all;
 }
 .initialLeft {
-    transform: translateX(-100%)
+    transform: translateX(-95%)
 }
 .initialRight {
-    transform: translateX(100%);
+    transform: translateX(95%);
 }
 
 .rightDoor {
@@ -103,8 +104,9 @@
     height: 100%;
     width: 50%;
 
-    background-image: url("../../assets/images/metal.jpg");
+    background-image: url("../../assets/images/spaceDoorRigth.jpg");
     background-size: cover;
+    background-position: center;
 
     border-left: 4px solid black;
 
@@ -136,19 +138,11 @@
     background-color: green;
 
     align-self: center;
-    transform: translateX(-50%);
+    transform: translateX(80%);
 
     transform-origin: center center;
 
     border-radius: 15%;
 
     pointer-events: all;
-}
-
-.openLockerAnimation {
-    animation: unlock 1000ms linear 0ms 1;
-}
-
-.closeLockerAnimation {
-    animation: lock 500ms linear 1000ms 2;
 }

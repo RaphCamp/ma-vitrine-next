@@ -32,8 +32,8 @@ export default function Doors() {
 
     return (
         <div className={styles.container}>
+                <Navigation handleButtonClick={handleLockerClick}/>
             <div className={`${styles.leftDoor} ${leftDoor.SelectStyle(doorState)}`}>
-                <Navigation/>
             </div>
             <div className={`${styles.rightDoor} ${rightDoor.SelectStyle(doorState)}`}>
                 <button onClick={handleLockerClick} className={`${styles.doorLocker} ${locker.SelectStyle(doorState)}`} >
