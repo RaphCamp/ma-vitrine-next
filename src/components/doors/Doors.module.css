@@ -52,28 +52,19 @@
 
 @keyframes unlock {
     from {
-        transform: translateX(-50%) rotateZ(0deg);
+        color:green;
     }
     to {
-        transform: translateX(-50%) rotateZ(360deg);
+        color:red;
     }
 }
 
 @keyframes lock {
     from {
-        transform: translateX(-50%) rotateZ(0deg);
+        color:red;
     }
     to {
-        transform: translateX(-50%) rotateZ(-360deg);
-    }
-}
-
-@keyframes notUsable-locker {
-    0% {
-        background-color: green;
-    }
-    20% {
-        background-color: red;
+        color:green;
     }
 }
 
@@ -89,8 +80,6 @@
     background-position: center;
     
     border-right:  4px solid black;
-
-    pointer-events: all;
 }
 .initialLeft {
     transform: translateX(-95%)
@@ -101,6 +90,8 @@
 
 .rightDoor {
     display: flex;
+    justify-content: end;
+
     height: 100%;
     width: 50%;
 
@@ -132,17 +123,19 @@
 }
 
 .doorLocker {
-    height: 192px;
-    width: 192px;
-
-    background-color: green;
+    color: rgb(39, 221, 39);
+    padding: 20px;
+    font-size: 3em;
+    font-weight: 900;
 
     align-self: center;
-    transform: translateX(80%);
-
-    transform-origin: center center;
-
-    border-radius: 15%;
+    transform: translateX(-50%);
 
     pointer-events: all;
+}
+.openLockerAnimation {
+    animation: unlock 1000ms ease-in-out;
+}
+.closeLockerAnimation {
+    animation: lock 1000ms ease-in-out;
 }

@@ -15,22 +15,35 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: #000000;
+  
+  border-radius: 10px;
 }
+.destination{
+  width: auto;
+  flex: 1;
+  align-items: center;
+  text-align: center;
+
+  font-size: 2em;
+
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 75px;
+  height: 6vh;
 }
 .screen {
   background-color: #000000;
-  width: 90%;
   border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
     align-self: flex-end;
+    width: 100%;
   }
   .instructions {
       display: flex;
@@ -39,27 +52,63 @@
       font-size: 3rem;
       height: 10%;
       min-height: 4rem;
-      width: 2000px;
+      width: 100%;
   }
   .instruction{
-      animation: nav-instruction linear 6s infinite;
+      transform: translateX(300%) ;
+      animation: nav-instruction 6s linear 0s infinite forwards ;
   }
   .instruction2{
-      animation: nav-instruction linear 6s infinite;
+    transform: translateX(200%) ;
+    animation: nav-instruction2 6s linear 3s infinite forwards ;
   }
 .button {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 3vh;
   background-color: red;
   pointer-events: all;
 }
 
 @keyframes nav-instruction{
     from {
+        transform: translateX(300%) ;
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+@keyframes nav-instruction2{
+    from {
         transform: translateX(200%) ;
     }
     to {
         transform: translateX(-200%);
     }
+}
+
+.upPanel {
+  transform: translateY(-18vh);
+  animation: upPanel 1000ms ease-in-out 0 1 forwards;
+}
+.downPanel {
+  transform: translateY(20vh);
+  animation: upPanel 1000ms ease-in-out 0 1 backwards;
+}
+
+@keyframes upPanel {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-18vh);
+  }
+}
+@keyframes downPanel {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-18vh);
+  }
 }
