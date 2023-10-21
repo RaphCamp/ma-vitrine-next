@@ -9,7 +9,7 @@
     width: 100vw;
 
     overflow: hidden;
-    z-index: 10;
+    z-index: 3;
 
     pointer-events: none;
 }
@@ -138,19 +138,11 @@
     background-color: green;
 
     align-self: center;
-    transform: translateX(-50%);
+    transform: translateX(80%);
 
     transform-origin: center center;
 
     border-radius: 15%;
 
     pointer-events: all;
-}
-
-.openLockerAnimation {
-    animation: unlock 1000ms linear 0ms 1;
-}
-
-.closeLockerAnimation {
-    animation: lock 500ms linear 1000ms 2;
 }
