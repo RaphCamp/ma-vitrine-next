@@ -23,11 +23,11 @@ export default function Intro() {
                 Un nouveau développeur</p>
               <br/>
               <p className={styles.paragraphe}>
-                Après 5 ans dans l'in&shy;dus&shy;trie aé&shy;ro&shy;nau&shy;tique, le jeune Code&shy;walker se forme sur les lan&shy;ga&shy;ges web.
+                Après 5 ans dans l'industrie aéronautique, le jeune Codewalker se forme sur les langages web.
                 <br/>
-                Il trouve en&shy;sui&shy;te une alter&shy;nance au sein de Cegid, dans le dé&shy;ve&shy;lop&shy;pement, et obtient son pre&shy;mier di&shy;plô&shy;me dans ce do&shy;mai&shy;ne.
+                Il trouve ensuite une alternance au sein de Cegid, dans le développement, et obtient son premier diplôme dans ce domaine.
                 <br/>
-                Sa mis&shy;sion ter&shy;mi&shy;née, Code&shy;walker se met dé&shy;sor&shy;mais à la re&shy;cher&shy;che d'une en&shy;tre&shy;pri&shy;se pour dé&shy;bu&shy;ter le tra&shy;vail de ses rêves...
+                Sa mission terminée, Codewalker se met désormais à la recherche d'une entreprise pour débuter le travail de ses rêves...
               </p>
               <Link className={styles.space_button} href="/cv">Découvrez son CV</Link>
             </div>
