@@ -139,3 +139,27 @@
 .closeLockerAnimation {
     animation: lock 1000ms ease-in-out;
 }
+.upPanel {
+    transform: translateY(-18vh);
+    animation: upPanel 1000ms ease-in-out ;
+  }
+  .downPanel {
+    animation: downPanel 1000ms ease-in-out ;
+  }
+  
+  @keyframes upPanel {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-18vh);
+    }
+  }
+  @keyframes downPanel {
+    from {
+      transform: translateY(-18vh);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }

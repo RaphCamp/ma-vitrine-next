@@ -1,26 +1,28 @@
-import { rubik_pixels } from '@/app/fonts';
 import styles from './navigation.module.css';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import { DoorState } from '../doors/DoorsAnimations';
 
 interface NavigationPops {
      handleButtonClick : any;
+    //  doorState : DoorState;
+     animation : string;
 }
 
 export default function Navigation(props:NavigationPops) {
     const pathname = usePathname();
-    const [panelIsUp,setPanelIsUp] = useState(true);
+    const [PanelAnimation,setPanelAnimation] = useState(styles.upPanel);
     const handleDestinationClick = () => {  
         props.handleButtonClick();
+        setPanelAnimation(styles.upPanel);
     }
-    const handlePanelButtonClick = () => {  
-        setPanelIsUp(panelIsUp!);
-        props.handleButtonClick();
+    const handlePanelButtonClick = () => { 
+            props.handleButtonClick();
     }
     return (
-        <main className={`${styles.container} ${panelIsUp? styles.upPanel:styles.downPanel}`}>
-            <div className={styles.destinations}>
+        <main className={`${styles.container} ${props.animation}`}>
+            <div className={styles.destinations} onClick={handlePanelButtonClick} >
                 <Link className={`${styles.destination} link ${pathname === '/' ? styles.active : styles.inactive}`} href="/">Accueil</Link>
                 <Link className={`${styles.destination} link ${pathname === '/cv' ? styles.active : styles.inactive}`} href="/cv">Mon CV</Link>
                 <Link className={`${styles.destination} link ${pathname === '/projets' ? styles.active : styles.inactive}`} href="/projets">Projets Perso</Link>
