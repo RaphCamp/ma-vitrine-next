@@ -2,13 +2,14 @@
   position: absolute;
     height: 25vh;
     width: 50vw;
-    background-image: url("../../../assets/images/metal.jpg");
+    background-image: url("../../assets/images/metal.jpg");
     padding: 10px;
     border-radius: 10px;
     z-index: 4;
     left: 25vw;
     display: flex;
     flex-direction: column;
+    pointer-events: all;
 }
 .destinations{
   flex: 6;
@@ -53,6 +54,8 @@
       height: 10%;
       min-height: 4rem;
       width: 100%;
+      pointer-events: none;
+      user-select: none;
   }
   .instruction{
       transform: translateX(300%) ;
@@ -87,28 +90,3 @@
     }
 }
 
-.upPanel {
-  transform: translateY(-18vh);
-  animation: upPanel 1000ms ease-in-out 0 1 forwards;
-}
-.downPanel {
-  transform: translateY(20vh);
-  animation: upPanel 1000ms ease-in-out 0 1 backwards;
-}
-
-@keyframes upPanel {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-18vh);
-  }
-}
-@keyframes downPanel {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-18vh);
-  }
-}

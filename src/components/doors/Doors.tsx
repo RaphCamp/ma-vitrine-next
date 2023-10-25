@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import styles from './Doors.module.css';
 import { DoorState, DoorsAnimation } from './DoorsAnimations';
-import Navigation from './navigation/navigation';
+import Navigation from '../navigation/navigation';
 
 
 export default function Doors() {
@@ -12,6 +12,7 @@ export default function Doors() {
     const leftDoor = new DoorsAnimation(styles.openLeftAnimation,styles.closeLeftAnimation,styles.initialLeft);
     const rightDoor = new DoorsAnimation(styles.openRightAnimation,styles.closeRightAnimation,styles.initialRight);
     const locker = new DoorsAnimation(styles.openLockerAnimation,styles.closeLockerAnimation);
+    const navBar = new DoorsAnimation(styles.upPanel,styles.downPanel,styles.upPanel);
 
 
     const handleLockerClick = () => {  
@@ -32,7 +33,7 @@ export default function Doors() {
 
     return (
         <div className={styles.container}>
-                <Navigation handleButtonClick={handleLockerClick}/>
+                <Navigation handleButtonClick={handleLockerClick} animation={navBar.SelectStyle(doorState)}/>
             <div className={`${styles.leftDoor} ${leftDoor.SelectStyle(doorState)}`}>
             </div>
             <div className={`${styles.rightDoor} ${rightDoor.SelectStyle(doorState)}`}>
