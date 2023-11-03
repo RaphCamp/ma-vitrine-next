@@ -1,5 +1,4 @@
 .container {
-  background-color: aliceblue;
   height: 100px;
   width: 95%;
   margin-left: auto;
@@ -8,4 +7,5 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 7vh;
 }
