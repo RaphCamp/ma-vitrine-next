@@ -17,7 +17,7 @@ export default function MuseeButtons(props:MuseeButtonsProps) {
       <h2>{props.filter.ActualValue}</h2>
       <div className={styles.liste}>
         {props.filter.Values.map((value:string) => (
-          <p onClick={() => handleClick(value)}>{value}</p>
+          <p onClick={() => handleClick(value)} key={value}>{value}</p>
         ))}
       </div>
     </main>
