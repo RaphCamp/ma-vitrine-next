@@ -6,7 +6,6 @@ import { DoorState } from '../doors/DoorsAnimations';
 
 interface NavigationPops {
      handleButtonClick : any;
-    //  doorState : DoorState;
      animation : string;
 }
 
@@ -32,7 +31,6 @@ export default function Navigation(props:NavigationPops) {
             <div className={styles.footer}>
                 <div onClick={handlePanelButtonClick} className={styles.screen}>
                     <div className={styles.instructions}>
-                    <p className={styles.instruction}>Welcome</p>
                     <p className={styles.instruction2}>Please enter a destination</p>
                     </div>
                 </div>
